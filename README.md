@@ -12,6 +12,10 @@ This setup should work for a variety of rg351 devices, including the rg351m, rg3
 5. Run the SETUP task and then reboot the device to ensure the user group changes take effect
 6. Now try running M8. If you're lucky it'll all work!
 
+## Building
+
+You can run the `_setup_build_tools.sh` and `_build_m8c.sh` scripts to rebuild m8c. Recommend running them in a terminal session so you can see the output.
+
 ## Problems
 
 ### No audio
