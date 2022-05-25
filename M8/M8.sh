@@ -25,8 +25,7 @@ else
   cd $roms_path
 fi
 
-sudo pulseaudio --system --file=_other_files/pulseaudio_config.pa &
-# alsaloop -P hw:0,0 -C hw:1,0 -t 50000 -B 5000 --rate 44100 --sync=0 -d
+alsaloop -P hw:0,0 -C hw:1,0 -t 50000 -B 5000 --rate 44100 --sync=0 -d
 ./_m8c/m8c
 
 

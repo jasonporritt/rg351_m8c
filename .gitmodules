@@ -1,0 +1,3 @@
+[submodule "M8/_m8c"]
+	path = M8/_m8c
+	url = git@github.com:laamaa/m8c.git
