@@ -10,8 +10,9 @@ This setup should work for a variety of rg351 devices, including the rg351m, rg3
   - M8 - launches m8c
   - _setup_build_tools.sh - install headers and build tools for compiling m8c
   - _build_m8c.sh - build the binary
-5. Run the SETUP task and then reboot the device to ensure the user group changes take effect
-6. Now try running M8. If you're lucky it'll all work!
+5. Connect your device to the internet (Wifi dongle or built-in wifi). It's required for SETUP so that packages can be installed, but not for running m8c itself.
+6. Run the SETUP task and then reboot the device to ensure the user group changes take effect
+7. Now try running M8. If you're lucky it'll all work!
 
 ## Building
 
