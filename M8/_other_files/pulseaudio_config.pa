@@ -1,0 +1,14 @@
+# Config for m8 loopback
+
+# ----
+# If you have trouble with the device numbers you may need to use the device names as shown below.
+# You can find the DirtyWave device number in the tyupdater dropdown or by running the pacmd commands
+# in the README.md file.
+# ----
+#set-default-sink alsa_output.platform-rk817-sound.stereo-fallback
+#set-default-source alsa_input.usb-DirtyWave_M8_11408540-02.analog-stereo
+#load-module module-loopback source=alsa_input.usb-DirtyWave_M8_11408540-02.analog-stereo sink=alsa_output.platform-rk817-sound.stereo-fallback
+
+set-default-sink 1
+set-default-source 1
+load-module module-loopback source=1 sink=1
