@@ -1,0 +1,15 @@
+--- _m8c/input.c	2022-06-01 22:03:02.000000000 -0400
++++ /Users/jason/Downloads/input.c	2022-06-12 20:50:18.000000000 -0400
+@@ -356,6 +356,12 @@
+     prev_key_analog = key_analog;
+   }
+ 
++  for (int gc = 0; gc < num_joysticks; gc++) {
++   if (SDL_GameControllerGetButton(game_controllers[gc], SDL_CONTROLLER_BUTTON_RIGHTSTICK) && SDL_GameControllerGetButton(game_controllers[gc], SDL_CONTROLLER_BUTTON_BACK)) {
++    key = (input_msg_s){special, msg_quit};
++   }
++  }
++
+   SDL_PollEvent(&event);
+ 
+   switch (event.type) {

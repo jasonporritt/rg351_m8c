@@ -26,7 +26,18 @@ Download one of the rg351_m8c releases from the link above if you don't want to 
 
 ## Building m8c on the device
 
-You can run the `_setup_build_tools.sh` and `_build_m8c.sh` scripts to rebuild m8c. Recommend running them in a terminal session so you can see the output.
+You can run the provided scripts to rebuild m8c on the device.
+
+- `_setup_build_tools.sh` - MUST BE ONLINE to install build tools
+- `_build_m8c.sh` 
+
+I recommend running them in a terminal session so you can see the output, but you're welcome to try your luck from the menu.
+
+If you're pulling down the repo via something other than a published release zip file, you'll need to apply the input patch before compiling m8c. Assuming the patch still matches up with the version of m8c you've pulled down, this command will apply the patch:
+
+- `patch -u M8/_m8c/input.c -i m8c_input.patch`
+
+Then proceed and build m8c as usual.
 
 ## Problems
 
