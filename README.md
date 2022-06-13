@@ -2,6 +2,14 @@
 
 This setup should work for a variety of rg351 devices, including the rg351m, rg351mp, and rg351v. It requires a custom firmware install. Instructions will focus on ArkOS but it may also work with 351Elec or TheRA with a few tweaks.
 
+## Download a release here
+
+https://github.com/jasonporritt/rg351_m8c/releases
+
+Download one of the rg351_m8c releases from the link above if you don't want to compile m8c yourself.
+
+## Setup
+
 1. Install ArkOS following their directions. https://github.com/christianhaitian/arkos/wiki
 2. Copy the M8 folder into /roms/ports/ directory (or /roms2/ports if you're using the second SD card on an rg351mp)
 3. Put the SD card in your device and boot it up
@@ -16,7 +24,7 @@ This setup should work for a variety of rg351 devices, including the rg351m, rg3
 6. Run the SETUP or SETUP_PULSE task and then reboot the device to ensure the user group changes take effect
 7. Now try running M8 or M8_PULSE. If you're lucky it'll all work!
 
-## Building
+## Building m8c on the device
 
 You can run the `_setup_build_tools.sh` and `_build_m8c.sh` scripts to rebuild m8c. Recommend running them in a terminal session so you can see the output.
 
