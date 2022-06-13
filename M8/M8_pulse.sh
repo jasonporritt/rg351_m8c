@@ -28,4 +28,4 @@ sudo pulseaudio --start --file=_other_files/pulseaudio_config.pa
 
 ./_m8c/m8c
 
-sudo pkill pulseaudio
+sudo pkill -f '_other_files/pulseaudio_config.pa'
