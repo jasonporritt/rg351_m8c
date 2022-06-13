@@ -27,3 +27,6 @@ fi
 sudo pulseaudio --start --file=_other_files/pulseaudio_config.pa
 
 ./_m8c/m8c
+
+procId=$(ps -ef | grep '_other_files/pulseaudio' | grep -v 'grep' | awk '{ printf $2 }')
+sudo kill $procId
