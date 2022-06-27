@@ -35,9 +35,18 @@ You can run the provided scripts to rebuild m8c on the device.
 
 I recommend running them in a terminal session so you can see the output, but you're welcome to try your luck from the menu.
 
-If you're pulling down the repo via something other than a published release zip file, you'll need to apply the input patch before compiling m8c. Assuming the patch still matches up with the version of m8c you've pulled down, this command will apply the patch:
+If you're pulling down the repo via something other than a published release zip file, you'll need to apply the patch before compiling m8c. 
+The patch addresses the following issues with m8c 9ed3e3a
+- Reset display on invalid packet
+- Don't exit m8c on M8 Effects Help Screen
+- Initialize gamepads on m8c start
+- Read game controller database before opening game controllers
+- Add gamepad options for quit and reset display
+- Add gamepad definitions for rk3326 devices
 
-- `patch -u M8/_m8c/input.c -i m8c_input.patch`
+Assuming the patch still matches up with the version of m8c you've pulled down, this command will apply the patch:
+
+- `patch -s -p0 < m8c.patch`
 
 Then proceed and build m8c as usual.
 
