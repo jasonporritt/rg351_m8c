@@ -2,6 +2,7 @@
 
 Automatically connect midi usb devices using ALSA (aconnect)
 
+https://github.com/smootalicious/auto_midi_connect  
 This is a fork of  https://github.com/stevelittlefish/auto_midi_connect modified to use with desktop systems, consoles, and handheld devices running firmware utilizing Emulation Station such as 351ELEC, ArkOS, TheRA.
 
 Tested with RG351v.
