@@ -2,6 +2,8 @@
 
 This setup should work for a variety of rg351 devices, including the rg351m, rg351mp, and rg351v. It requires a custom firmware install. Instructions will focus on ArkOS but it may also work with 351Elec or TheRA with a few tweaks.
 
+Source files are included in the releases, so it may be possible to compile on desktop systems, consoles, and other devices.
+
 ## Download a release here
 
 https://github.com/jasonporritt/rg351_m8c/releases
@@ -38,6 +40,27 @@ If you're pulling down the repo via something other than a published release zip
 - `patch -u M8/_m8c/input.c -i m8c_input.patch`
 
 Then proceed and build m8c as usual.
+
+## Features
+### Emulation Station friendly shell scripts
+Includes scripts to run it directly from EmulationStation. 
+Currently tested in ArkOS, but should work with 351ELEC or TheRA and 
+possibly other rpi-based distributions, desktop systems, consoles, and other devices.
+
+### setup/gamepad_config
+`gamepad_config` is a console based program that lets you see what joysticks 
+and game controllers are detected by SDL and configure SDL mappings. 
+In most cases, once running, the program can be controlled exclusively by the
+connected joystick/gamepad.
+
+Includes a config helper for m8c that will translate m8c
+button inputs to the proper values and output a snippet that can be dropped 
+in to the m8c config.ini file found in `/home/<user>/.local/share/m8c/`
+
+### midi_connect
+Automatically connect midi usb devices using ALSA (aconnect)
+- midi_connect.sh - automatically map every MIDI device onto every other MIDI device.
+- midi_disconnect.sh - disconnects all mappings on all midi devices.
 
 ## Problems
 
