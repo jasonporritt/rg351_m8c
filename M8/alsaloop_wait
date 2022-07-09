@@ -1,0 +1,23 @@
+#!/bin/bash
+
+var=$(aconnect -o|grep M8)
+var2=$(aconnect -o|grep XYXYX)
+var3=$(ps aux|grep [a]lsaloop|grep -v alsaloop_wait)
+
+while : 
+do
+
+if [ "$var" = "$var2" ]
+ then 
+  var=$(aconnect -o|grep M8)
+  sleep 1
+ else 
+  if [ "$var2" = "$var3" ] 
+  then 
+   sleep 1
+   alsaloop -P hw:0,0 -C hw:1,0 -t 200000 -A 5 --rate 44100 --sync=0 -T -1 -d
+fi
+fi
+
+done
+
