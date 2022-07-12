@@ -16,12 +16,17 @@ Download one of the rg351_m8c releases from the link above if you don't want to 
 2. Copy the M8 folder into /roms/ports/ directory (or /roms2/ports if you're using the second SD card on an rg351mp)
 3. Put the SD card in your device and boot it up
 4. Under Ports you should now see an m8 item with a few scripts
-  - SETUP - will install libserialport and add your user to the proper group to interact with serial devices.
-  - M8 - launches m8c (uses alsaloop for audio)
-  - SETUP_PULSE - installs pulseaudio if you prefer that audio subsystem
+  - SETUP folder
+    - GAMEPAD-CONFIG -  see Features below 
+    - SETUP - will install libserialport and add your user to the proper group to interact with serial devices.
+    - SETUP_PULSE - installs pulseaudio if you prefer that audio subsystem
+    - _setup_build_tools.sh - install headers and build tools for compiling m8c
+    - _build_m8c.sh - build the binary
+  - M8 - launches m8c with cpu locked to powersave (uses alsaloop for audio) 
+  - M8_PERFORMANCE - launches m8c with cpu locked to "performance" (uses alsaloop for audio) 
   - M8_PULSE - run m8c using pulseaudio
-  - _setup_build_tools.sh - install headers and build tools for compiling m8c
-  - _build_m8c.sh - build the binary
+  - MIDI_CONNECT - automatically map every MIDI device onto every other MIDI device. 
+  - MIDI_DISCONNECT - disconnects all mappings on all midi devices. 
 5. Connect your device to the internet (Wifi dongle or built-in wifi). It's required for SETUP so that packages can be installed, but not for running m8c itself.
 6. Run the SETUP or SETUP_PULSE task and then reboot the device to ensure the user group changes take effect
 7. Now try running M8 or M8_PULSE. If you're lucky it'll all work!
@@ -73,6 +78,8 @@ Also check alsamixer settings. You may have a device muted or set to low volume.
 Update to latest OS. In ArkOS you can do Options > Update while connected to the internet.
 
 If wifi is enabled you can sometimes hear audible wifi noise on the bus. Try disabling wifi before running m8c.
+
+Try running M8_PERFORMANCE to lock the cpu to performance mode.
 
 If the alsaloop setup (default) has audio glitches or crashes, you can use the pulseaudio variant of the commands.
 
