@@ -14,9 +14,11 @@ if [ "$var" = "$var2" ]
  else 
   if [ "$var2" = "$var3" ] 
   then 
-   sleep 1
    sudo pulseaudio --start --file=pulseaudio_config.pa
    var3=$(ps aux|grep [p]ulseaudio_config)
+   sleep 1
+  else
+   sleep 2
 fi
 fi
 
