@@ -24,7 +24,8 @@ Download one of the rg351_m8c releases from the link above if you don't want to 
     - _build_m8c.sh - build the binary
   - M8 - launches m8c with cpu locked to powersave (uses alsaloop for audio) 
   - M8_PERFORMANCE - launches m8c with cpu locked to "performance" (uses alsaloop for audio) 
-  - M8_PULSE - run m8c using pulseaudio
+  - M8_PULSE - run m8c using pulseaudio with cpu locked to powersave
+  - M8_PULSE_PERFORMANCE - run m8c using pulseaudio with cpu locked to "performance"
   - MIDI_CONNECT - automatically map every MIDI device onto every other MIDI device. 
   - MIDI_DISCONNECT - disconnects all mappings on all midi devices. 
 5. Connect your device to the internet (Wifi dongle or built-in wifi). It's required for SETUP so that packages can be installed, but not for running m8c itself.
