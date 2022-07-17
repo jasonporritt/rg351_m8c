@@ -735,10 +735,9 @@ void config_m8c(int idx) {
                 fclose(f);
             }
             printf("\nYou'll need to manually update these values in the config.ini\n file in: %s\n", SDL_GetPrefPath("", "m8c"));
-            printf("\nPLEASE NOTE: As of 6/25/22, you'll need to patch m8c to\n");
-            printf("take advantage of \"Quit\" and \"Display Reset\"on the gamepad.\n");
-            printf("If you are using the patched version, you must press SHIFT+quit\n");
-            printf("or SHIFT+reset to trigger those actions.\n");
+            printf("\nPLEASE NOTE: to take advantage of \"Quit\" and \"Display Reset\"\n");
+            printf("on the gamepad, you must press SHIFT+quit or SHIFT+reset\n");
+            printf("to trigger those actions.\n");
         }
 
         wait_quit();
