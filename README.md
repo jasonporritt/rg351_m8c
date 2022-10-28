@@ -1,5 +1,7 @@
 # m8 Headless for RG351 devices
 
+#### Requires M8 headless on Teensy 4.1.  See: https://github.com/DirtyWave/M8Docs/blob/main/docs/M8HeadlessSetup.md
+
 This setup should work for a variety of rg351 devices, including the rg351m, rg351mp, and rg351v. It requires a custom firmware install. Instructions will focus on ArkOS but it may also work with 351Elec or TheRA with a few tweaks.
 
 Source files are included in the releases, so it may be possible to compile on desktop systems, consoles, and other devices.
