@@ -4,20 +4,20 @@ Midi devices and/or external sound cards can be used. In most cases latency will
 I haven't had very good luck sampling directly into Headless on the RG351 devices, but it might work ok on a Mac or PC.
 Personally, for the best results, I create samples on the PC or other devices and copy onto the M8 sdcard.
 
-The card index for ALSA and/or PulseAudio depends on order connected to the rg351 device.
+The card index for ALSA and/or PulseAudio depends on order connected to the rg351 device.  
 For best results, plug in teensy first, then optionally an external sound card, then optionally a midi device.
 
-**In ArkOS to access ssh:**
-Options/Network Info - note the ip address.
-Options/Enable remote services
+**In ArkOS to access ssh:**  
+Options/Network Info - note the ip address.  
+Options/Enable remote services  
 From your PC run:
 	`ssh <ip-addr> -l ark`
 
 In the ssh terminal run
 	`cd roms2/ports/M8`
 
-**ALSA Commands:**
-card# depends on order connected to the rg351
+**ALSA Commands:**  
+card# depends on order connected to the rg351  
 For best results, plug in teensy first, then external sound card then midi
 
 `aplay -l` 
@@ -26,7 +26,7 @@ shows playback devices
 `arecord -l`
 shows capture devices
 
-Example for aplay and arecord
+**Example for aplay and arecord**  
 	M8 is connected then external USB Audio device is connected
 
  	ark@rg351v:/roms2/ports/M8$ aplay -l
@@ -55,7 +55,7 @@ Example for aplay and arecord
 	  Subdevices: 1/1
 	  Subdevice #0: subdevice #0
 
-Connect M8 to rockchip out 
+Connect M8 to rockchip out  
 	`alsaloop -P hw:0,0 -C hw:1,0 -t 200000 -A 5 --rate 44100 --sync=0 -T -1 -d`
 
 You can edit the alsaloop_wait file with the correct alsaloop command
@@ -64,12 +64,12 @@ You'll need to use some pulseaudio commands to change the active port on a USB s
 
 ### **PulseAudio**
 
-Determine active audio ports on USB audio
+Determine active audio ports on USB audio  
 If you get errors, you may need to restart pulse before each command.
 
 **Input ports**
 
-First stop emulationstation
+First stop emulationstation  
 `ark@rg351v:/roms2/ports/M8$ sudo systemctl stop emulationstation`
 
 ```
@@ -91,19 +91,19 @@ ark@rg351v:/roms2/ports/M8$ sudo pacmd
         active port: <analog-input-linein>
 ...
 ```		
-to change active input port:
-`>>> set-source-port <index#> analog-input-linein`
-or
+to change active input port:  
+`>>> set-source-port <index#> analog-input-linein`  
+or  
 `>>> set-source-port <index#> analog-input-mic`
 
-**Output Ports**
-`>>>list-sinks`
+**Output Ports**  
+`>>>list-sinks`  
 Note the sinks
 
-Exit pacmd
+Exit pacmd  
 `>>> exit`
 
-Restart emulationstation
+Restart emulationstation  
 `ark@rg351v:/roms2/ports/M8$ sudo systemctl start emulationstation`
 
 Edit the pulseaudio_pa file - set the sink and source corresponding to the correct device index from the listings in pacmd
