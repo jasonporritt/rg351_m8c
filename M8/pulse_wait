@@ -18,6 +18,7 @@ if [ "$var" = "$var2" ]
    var3=$(ps aux|grep [p]ulseaudio_config)
    sleep 1
   else
+   var3=$(ps aux|grep [p]ulseaudio_config)
    sleep 2
 fi
 fi
