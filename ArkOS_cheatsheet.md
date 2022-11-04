@@ -1,4 +1,4 @@
-###**Installing ArkOS** (cheat sheet for Windows)
+### **Installing ArkOS** (cheat sheet for Windows)
 full instructions at https://github.com/christianhaitian/arkos/wiki#instructions-for-loading
 
 **ArkOS downloads**
