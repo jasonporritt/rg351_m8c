@@ -1,4 +1,4 @@
-###**RG351 M8 Headless Advanced audio**
+### **RG351 M8 Headless Advanced audio**
 
 Midi devices and/or external sound cards can be used. In most cases latency will be pretty bad and impact usability.
 I haven't had very good luck sampling directly into Headless on the RG351 devices, but it might work ok on a Mac or PC.
