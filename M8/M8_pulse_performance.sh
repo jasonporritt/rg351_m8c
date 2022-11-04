@@ -5,6 +5,8 @@
 #sudo sed -i '$ablacklist mt7601u' /etc/modprobe.d/blacklist.conf
 #printf "\n\n\n\e[32mWifi has been disabled.\n"
 
+sed -i "/^idle_ms=/s/=.*/=10/" ~/.local/share/m8c/config.ini
+
 m8_path=ports/M8
 roms2_path=/roms2/$m8_path
 roms_path=/roms/$m8_path
