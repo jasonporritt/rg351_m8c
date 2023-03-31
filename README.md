@@ -6,6 +6,9 @@ This setup should work for a variety of rg351 devices, including the rg351m, rg3
 
 Source files are included in the releases, so it may be possible to compile on desktop systems, consoles, and other devices.
 
+## Thanks to lamaa for the m8c code that makes this thing work ##
+lamaa's repo is here: https://github.com/laamaa/m8c/
+
 ## Download a release here
 
 https://github.com/jasonporritt/rg351_m8c/releases
