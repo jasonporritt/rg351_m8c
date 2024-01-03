@@ -18,9 +18,9 @@ You can use the Administrative tools/computer management/Disk Management in Wind
 **Install ArkOS image**
 Use the imager to restore the arkos image file - this takes a few minutes.
 eject and put the card in the first (top) slot of the RG351v
-Start the RG351 and follow the on-screen instructions. This takes several minutes.
+Start the RG351 and follow the on-screen instructions. This takes several minutes. If you see only a white screen with a black bar on the left side, see [this solution](https://github.com/christianhaitian/arkos/issues/662#issuecomment-1510064072).
 
-Options/Wifi - Setup wifi (shoulder buttons advance cursor)
+Options/Wifi - Setup wifi (shoulder buttons advance cursor). You have to be connected to the internet to run the setup scripts.
 Options/Network_info - Verify Network_info
 Options/Update - follow on-screen instructions - this takes several minutes
 
